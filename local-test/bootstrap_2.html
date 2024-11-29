@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <h1>container / container-fluid 차이점</h1>
     <div class="container bg-success">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit fugit quae
         fuga eveniet enim dignissimos nihil sit neque necessitatibus numquam, quod, aliquam provident ipsum reiciendis
@@ -20,19 +21,23 @@
         fuga eveniet enim dignissimos nihil sit neque necessitatibus numquam, quod, aliquam provident ipsum reiciendis
         quis in optio! Placeat!
     </div>
+    <hr>
+
+
+    <h1>비율을 사용해서 나누기</h1>
     <div class="container mt-5 text-center">
         <div class="row">
-            <div class="col-2 col-sm-8 col-lg-1">
+            <div class="col-2">
                 <div class="bg-danger">
                     content 1
                 </div>
             </div>
-            <div class="col-6 col-sm-2 col-lg-10">
+            <div class="col-6">
                 <div class="bg-warning">
                     content 2
                 </div>
             </div>
-            <div class="col-4 col-sm-2 col-lg-1">
+            <div class="col-4">
                 <div class="bg-primary">
                     content 3
                 </div>
@@ -77,6 +82,44 @@
             </div>
         </div>
     </div>
+
+    <hr>
+
+
+
+    <h3>margin과 padding 여백</h3>
+    <h6>1. Margin</h6>
+    <div class="bg-primary m-5">
+        한 개의 div 입니다.
+    </div>
+    <div class="bg-info m-4">
+        한 개의 div 입니다.
+    </div>
+    <div class="bg-success m-3">
+        한 개의 div 입니다.
+    </div>
+    <div class="bg-warning m-2">
+        한 개의 div 입니다.
+    </div>
+    <div class="bg-danger m-1">
+        한 개의 div 입니다.
+    </div>
+
+    <hr>
+    <div class="bg-primary mt-3">위 쪽에 Margin 입니다.</div>
+    <div class="bg-info ms-3">왼 쪽에 Margin 입니다.</div>
+    <div class="bg-success mb-3">아래 쪽에 Margin 입니다.</div>
+    <div class="bg-warning me-3">오른 쪽에 Margin 입니다.</div>
+    <div class="bg-danger m-3">오른 쪽에 Margin 입니다.</div>
+
+    <hr>
+
+
+    <div class="bg-primary pt-3">위 쪽에 padding 입니다.</div>
+    <div class="bg-info ps-3">왼 쪽에 padding 입니다.</div>
+    <div class="bg-success pb-3">아래 쪽에 padding 입니다.</div>
+    <div class="bg-warning pe-3">오른 쪽에 padding 입니다.</div>
+    <div class="bg-danger p-3">오른 쪽에 padding 입니다.</div>
 </body>
 
 </html>
