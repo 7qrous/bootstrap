@@ -1,0 +1,216 @@
+<!-- bootstrap_2.html -->
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../bootstrap-5.3/css/bootstrap.min.css" />
+    <script src="../bootstrap-5.3/js/bootstrap.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>container 과 container-fluid 차이점</h3>
+    <div class="container bg-success">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illum
+      harum repellat accusamus veritatis aliquid mollitia atque, voluptatem
+      assumenda sit iste aperiam aspernatur nemo impedit dolore amet minus
+      quibusdam alias.
+    </div>
+    <hr />
+    <div class="container-fluid bg-primary">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium
+      adipisci fuga beatae ducimus architecto suscipit, magni repellendus
+      voluptatum error deleniti quisquam mollitia natus quia impedit, fugit,
+      libero molestiae minus ea!
+    </div>
+    <hr>
+    <h3>Grid 사용법</h3>
+    <h6>기본 row - col 이용</h6>
+    <div class="container mt-5 text-center">
+      <div class="row">
+        <div class="col">
+          <div style="background-color: orange">content1</div>
+        </div>
+        <div class="col">
+          <div style="background-color: red">content2</div>
+        </div>
+        <div class="col">
+          <div style="background-color: blue">content3</div>
+        </div>
+      </div>
+    </div>
+    <h6>비율을 사용해 나누기</h6>
+    <div class="container mt-5 text-center">
+      <div class="row">
+        <div class="col-2">
+          <div style="background-color: orange">content1</div>
+        </div>
+        <div class="col-6">
+          <div style="background-color: red">content2</div>
+        </div>
+        <div class="col-4">
+          <div style="background-color: blue">content3</div>
+        </div>
+      </div>
+    </div>
+    <h6>각각의 반응형 그리드 비율</h6>
+    <div class="container mt-5 mb-5 text-center">
+      <div class="row">
+        <div class="col-12 col-sm-12 col-lg-2">
+          <div class="bg-warning">content1</div>
+        </div>
+        <div class="col-12 col-sm-8 col-lg-6">
+          <div class="bg-danger">content2</div>
+        </div>
+        <div class="col-12 col-sm-4 col-lg-4">
+          <div class="bg-primary">content3</div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <h3>Margin 과 Padding 여백</h3>
+    <h6>1. Margin</h6>
+    <div class="bg-primary m-5">한 개의 div 입니다.</div>
+    <div class="bg-info m-4">한 개의 div 입니다.</div>
+    <div class="bg-success m-3">한 개의 div 입니다.</div>
+    <div class="bg-warning m-2">한 개의 div 입니다.</div>
+    <div class="bg-danger m-1">한 개의 div 입니다.</div>
+    <hr>
+    <div class="bg-primary mt-3">위 쪽에 Margin 입니다.</div>
+    <div class="bg-info ms-3">왼 쪽에 Margin 입니다.</div>
+    <div class="bg-success mb-3">아래 쪽에 Margin 입니다.</div>
+    <div class="bg-warning me-3">오른 쪽에 Margin 입니다.</div>
+    <hr>
+    <h6>2. Padding</h6>
+    <div class="bg-primary p-5">한 개의 div 입니다.</div>
+    <div class="bg-info p-4">한 개의 div 입니다.</div>
+    <div class="bg-success p-3">한 개의 div 입니다.</div>
+    <div class="bg-warning p-2">한 개의 div 입니다.</div>
+    <div class="bg-danger p-1">한 개의 div 입니다.</div>
+    <hr>
+    <div class="bg-primary pt-3">위 쪽에 Padding 입니다.</div>
+    <div class="bg-info ps-3">왼 쪽에 Padding 입니다.</div>
+    <div class="bg-success pb-3">아래 쪽에 Padding 입니다.</div>
+    <div class="bg-warning pe-5 text-end">오른 쪽에 Padding 입니다.</div>
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col p-3 bg-secondary text-white 
+        d-flex flex-row justify-content-evenly">
+          <div class="p-2 bg-info">Flex Item 1</div>
+          <div class="p-2 bg-warning">Flex Item 2</div>
+          <div class="p-2 bg-primary">Flex Item 3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="height:200px;" 
+             class="col p-3 bg-secondary text-white 
+                    d-flex align-items-stretch" >
+          <div class="p-2 bg-info">Flex Item 1</div>
+          <div class="p-2 bg-warning">Flex Item 2</div>
+          <div class="p-2 bg-primary">Flex Item 3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div style="height:200px;" 
+             class="col p-3 bg-secondary text-white 
+                    d-flex align-items-stretch" >
+          <div class="p-2 bg-info align-self-start">Flex Item 1</div>
+          <div class="p-2 bg-warning align-self-end">Flex Item 2</div>
+          <div class="p-2 bg-primary align-self-center">Flex Item 3</div>
+          <div class="p-2 bg-warning align-self-baseline">Flex Item 4</div>
+          <div class="p-2 bg-primary align-self-stretch">Flex Item 5</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col p-3 bg-secondary text-white 
+                    d-flex">
+          <div class="p-2 bg-info flex-fill">Flex Item 1</div>
+          <div class="p-2 bg-warning flex-fill">Flex Item 2</div>
+          <div class="p-2 bg-primary flex-fill">Flex Item 3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col bg-secondary d-flex mb-3">
+          <div class="p-2 bg-primary">Flex item1</div>
+          <div class="p-2 bg-warning">Flex item2</div>
+          <div class="p-2 bg-danger ms-auto">Flex item3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div  style="height : 200px;"
+              class="col bg-secondary mb-3 d-flex flex-column
+                     align-items-start">
+          <div class="p-2 bg-primary">Flex item1</div>
+          <div class="p-2 bg-warning mb-auto">Flex item2</div>
+          <div class="p-2 bg-danger">Flex item3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col bg-secondary d-flex flex-wrap">
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col bg-secondary d-flex flex-nowrap">
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+          <div class="p-2 bg-primary">flex-item1</div>
+          <div class="p-2 bg-warning">flex-item2</div>
+          <div class="p-2 bg-info">flex-item3</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mt-3 bg-secondary d-flex flex-wrap">
+          <div class="p-2 bg-primary order-2">flex-item1</div>
+          <div class="p-2 bg-warning order-0">flex-item2</div>
+          <div class="p-2 bg-info order-1">flex-item3</div>
+          <div class="p-2 bg-primary order-3">flex-item4</div>
+          <div class="p-2 bg-warning order-5">flex-item5</div>
+          <div class="p-2 bg-info order-4">flex-item6</div>
+          <div class="p-2 bg-primary">flex-item7</div>
+          <div class="p-2 bg-warning">flex-item8</div>
+          <div class="p-2 bg-info">flex-item9</div>
+        </div>
+      </div>
+      <div class="row">
+        <div  style="height:200px;"
+              class="col mt-3 bg-secondary d-flex flex-wrap
+                     align-content-stretch">
+          <div class="p-2 bg-primary order-2">flex-item1</div>
+          <div class="p-2 bg-warning order-0">flex-item2</div>
+          <div class="p-2 bg-info order-1">flex-item3</div>
+          <div class="p-2 bg-primary order-3">flex-item4</div>
+          <div class="p-2 bg-warning order-5">flex-item5</div>
+          <div class="p-2 bg-info order-4">flex-item6</div>
+          <div class="p-2 bg-primary">flex-item7</div>
+          <div class="p-2 bg-warning">flex-item8</div>
+          <div class="p-2 bg-info">flex-item9</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col mt-3 bg-secondary d-flex 
+                    align-items-center">
+          <div class="w-25">
+            <img src="images/dog.jpg" alt="강아지사진" width="100%">
+          </div>
+          <div class="flex-grow-1 ms-3">
+            This is some content from a media component. you can replace this with any content and adjust it as needed.
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+
+부트스트랩 - Bootstrap
+
+Jquery 기반의 오픈 소스 프레임워크
+ - CSS 를 덜 신경쓰게 해주는 개발도구.
+ - 클래스Name 추가로 스타일을 입혀준다.
+ - 반응형까지 지원
+
+Bootstrap 설치
+ - 1. CDN 으로 웹 링크를 걸어 받아쓰기.
+	- bootstrapCDN 검색 후 링크 복사 (CSS , Javascript 복사)
+ - 2. 실제 파일 자체를 다운 받아서 사용.
+	- bootstrap.css : 들여쓰기 내어쓰기 정렬된 css코드
+	- bootstrap.min.css : 들여쓰기 내어쓰기 줄바꿈 없이 경량화된 css코드
+
+<< Bootstrap 실습 (bootstrap_1.html) >>
+
+1. h 와 display 차이점
+
+display-1: 5rem,
+display-2: 4.5rem,
+display-3: 4rem,
+display-4: 3.5rem,
+display-5: 3rem,
+display-6: 2.5rem
+
+h1 = 2.5rem
+h2 = 2 rem
+h3 = 1.75 rem
+h4 = 1.5 rem
+h5 = 1.25 rem
+h6 = 1rem
+
+2. 텍스트 정렬
+가운데 정렬 text-center
+오른쪽 정렬 text-end
+왼쪽 정렬 text-start
+
+3. Float 넣기
+Float left ( float-start )
+Float right ( float-end )
+Float none ( float-none )
+
+4. text-color
+text-[ColorName]
+ColorName ex) primary, secondary, success, danger, warning 등등
+
+5. Background-color
+bg-[ColorName]
+ColorName ex) primary, secondary, success, danger, warning 등등
+
+6. 영문 철자
+text-uppercase	모두 대문자로
+text-lowercase	모두 소문자로
+text-capitalize	한글자만 대문자로
+
+7. 글자 및 아래에 명언자 남기기( 작성한 html 코드 참고 )
+
+8. 리스트의 불릿 이미지 없애기 및 인라인으로 만들기 ( 작성한html 코드 참고 )
+
+<< Bootstrap 실습 (bootstrap_2.html) >>
+
+1. container 과 container-fluid 차이점
+
+ - container 은 고정형 ( 반응형으로 크기 변경 )
+ - container-fluid 는 무조건 width 100%
+
+2. grid
+
+ - row와 col을 이용해서 grid 만들기
+ - col비율을 이용해서 나누기
+ - 화면 크기에 따라 col 비율 바꾸기
+
+3. Margin 과 Padding
+
+ - m-1~5 / p-1~5
+ - top left bottom right = mt ms mb me / pt ps pb pe
+ - 상하 / 좌우 = my, py / mx, px
+
+4. flex
+
+ - flex container 지정 : d-flex
+ - flex-direction 지정 : flex-row / flex-column / flex-row-reverse / flex-column-reverse
+ - justify-content 지정 ( 주축 정렬 )
+    > justify-content-[start/end/center/between/around/evenly]
+ - align-items 지정 ( 교차축 정렬 )
+    > align-items-[start/end/center/baseline/stretch]
+ - align-self 지정 ( 각 개인항목의 교차축 정렬 )
+    > align-self-[start/end/center/baseline/stretch]
+ - flex 항목의 width가 꽉차게 배치 : flex-fill
+    * 플렉스 항목에 작성해줘야 함
+ - grow / shrink
+    > flex-grow-N ( N = 숫자 )
+    > flex-shrink-N (N = 숫자 )
+ - Auto Margin : 마진을 이용해서 flex 아이템 정렬시키기
+    > 1번,2번,3번 3개의 항목이 있다면
+    > 2번에 ms-auto / me-auto 를 추가해서 1개/2개 또는 2개/1개 로 만들기
+    > flex컨테이너에 flex-column을 준 경우에는 mt-auto / mb-auto 를 이용하기 가능
+ - Wrap : 플렉스 항목이 많아서 2줄로 나눠야할 경우 나눌것인가 / 그냥 둘 것인가
+    > flex-wrap : 2줄로 나눌 것이다.
+    > flex-nowrap : 그냥 한 줄로 둘 것이다.
+ - order : 플렉스 항목에 대한 순서(0 ~ 5)를 두는 것
+    > order-(0~5) : 0부터 5번까지의 우선순위를 두는 것
+ - align-content : 두 줄이상의 플렉스 항목을 어떻게 배치할 것인가
+    > align-content-[start/end/center/between/around/stretch]
+
+<< Bootstrap 실습 (bootstrap_3.html) >>
+
+1. table
+
+ - 기본 테이블 작성 후 table 태그에 class명 table 넣기
+ - 테이블 색상 넣기 : table-[색상명]
+    > 전체 테이블 = table 태그에
+    > 하나의 행만 = tr 태그에
+    > 하나의 셀만 = th 또는 td 태그에
+ - 각각의 row마다 진하게 ( table-striped )
+    > 테이블에 색상이 입혀있어도 줄무늬처럼 보인다
+ - 각각의 column마다 진하게 ( table-striped-columns )
+    > 테이블에 색상이 입혀있어도 줄무늬처럼 보인다
+ - 테이블 row에 hover 이펙트 추가 ( table-hover )
+ - 각 테이블 row 또는 cell 에 활성화 (조금진하게) 표시
+    > tr 또는 th , td 에 table-active 추가
+ - 테이블 테두리 추가 ( table-bordered )
+ - 테이블 테두리 색상 ( border-[색상명] )
+ - 테이블에 테두리 없애기 ( table-borderless )
+ - 테이블을 조금 작게 만들기 ( table-sm )
+ - 테이블의 그룹 나누기 ( table-group-divider )
+ - 테이블 셀마다 vertical align 잡아주기
+    > align-[middle/top/bottom]
+    > 각 기준 테이블(<table>), 행(<tr>), 셀(<th>,<td>) 에 넣기
+ - 테이블 캡션 기본적으로 테이블 아래에 있는 캡션을 위로 올리기
+    > caption-top
+
+2. list
+
+ - 리스트를 감싸는 영역(ul, ol, div)에 list-group 작성
+ - 각 리스트를 강조 및 비사용으로 만들기
+    > 각 리스트 항목에 active
+    > 각 리스트 항목에 disable
+ - 리스트마다 버튼 효과(hover + active)적용
+    > 각 리스트 마다 list-group-item-action 넣기
+ - 리스트의 바깥 테두리 없애기
+    > 리스트 감싸는 영역(ul,ol,div)에 list-group-flush 추가
+ - 각 리스트에 숫자 작성
+    > 리스트 감싸는 영역(ul,ol,div)에 list-group-numbered 추가
+ - 리스트를 가로로 보이게 하기
+    > list-group-horizontal
+ - 각 리스트 색상
+    > list-group-item-[색상이름]
+
+3. button
+
+ - 기본 버튼 만들기( button 외에 a태그 input(button,submit,reset)도 가능 )
+    > btn 클래스 추가
+ - 버튼 색상 추가
+    > btn-[색상이름] 클래스 추가
+ - 버튼 outline(테두리) 색상 추가
+    > btn-outline-[색상이름] 클래스 추가
+ - 여러 버튼을 그룹으로 만들기
+    > 버튼들을 감싸는 영역(div)에 btn-group 클래스 추가
+    > 버튼들을 세로로 세우기 btn-group-vertical 클래스 추가
+ - 라디오 버튼으로 수직 버튼 스타일 작성
+    > bootstrap_3.html code 참고
+
+4. Badge(뱃지)
+
+ - 기본 뱃지 만들기
+    > badge 클래스 추가
+ - 뱃지 배경 색상
+    > text-bg-[색상이름] 클래스 추가
+ - 동그란 뱃지 ( 알약 같이 생긴 뱃지 ) 만들기
+    > rounded-pill 클래스 추가
+
+5. 프로그래스 바 ( progress bar )
+
+ - 기본 프로그레스 바 ( 원활하게 적기위해 emmet 작성법 사용 )
+    > 1. div.progress 안에 div.progress-bar 를 작성한다.
+    > 2. div.progress-bar 에 style="width:?%" 로 게이지 작성한다.
+ - 기본적으로 게이지 안에만 글이 보이는데, 게이지 밖에도 글이 보이게하려면
+    > div.progress-bar 에 overflow-visibla 클래스 추가
+ - 프로그레스 바 색상 변경
+    > div.progress-bar 에 bg-[색상이름] 클래스 추가
+ - 프로그레스 바 높이 변경
+    > div.progress 에 height 스타일 추가
+ - 프로그레스 바의 게이지에 줄무늬 모양과 애니메이션 추가
+    > div.progress-bar 에 progress-bar-striped 클래스 추가 ( 줄무늬 )
+    > div.progress-bar 에 progress-bar-animated 클래스 추가 ( 애니메이션 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
