@@ -44,6 +44,21 @@
     <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
         data-bs-placement="top" data-bs-custom-class="custom-popover" data-bs-title="Custom Popover"
         data-bs-content="커스텀 스타일을 입힌 팝오버 입니다">Custom-PopOver</button>
+
+    <!--
+        data-bs-trigger="hover focus"     >> 요소를 실행하게 할 방법 ( hover, focus )
+    -->
+    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus"
+        data-bs-content="Disabled">
+        <button class="btn btn-danger" disabled>Disabled button</button>
+    </span>
+    
+    <!-- 
+      브라우저나 플랫폼에 관계없이 다음 클릭으로 닫기를 사용하기 위해서는 특정 HTML이 필요합니다.
+       a 태그만 사용할 수 있으며, tabindex 속성을 포함해야함
+    -->
+    <a class="btn btn-danger-btn-lg" data-bs-toggle="popover" data-bs-trigger="focus"
+        data-bs-title="Dismissible popover" data-bs-content="다른 곳 클릭하면 꺼짐"></a>
     <script>
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
