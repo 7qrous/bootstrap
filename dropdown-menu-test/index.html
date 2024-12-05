@@ -40,8 +40,48 @@
             <li><a class="dropdown-item" href="#">4번 메뉴</a></li>
         </ul>
     </div>
+    <div>
+        <br>
+    </div>
+    <!-- 메뉴 리스트 중에 텍스트(클릭)넣기 -->
+    <div class="dropdown">
+        <a class="btn btn-danger dropdown-toggle" role="button" type="button" data-bs-toggle="dropdown">Dropdown
+            Button</a>
+        <ul class="dropdown-menu">
+            <li><span class="dropdown-item-text">Dropdown item text</span></li>
+            <li><a class="dropdown-item" href="#">1번 메뉴</a></li>
+            <li><a class="dropdown-item" href="#">2번 메뉴</a></li>
+            <li><a class="dropdown-item" href="#">3번 메뉴</a></li>
+            <li>
+                <!-- 버튼 사이에 줄긋기 -->
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">4번 메뉴</a></li>
+        </ul>
+    </div>
+    <div>
+        <br>
+    </div>
+    <!-- Example split danger button -->
+    <div class="btn-group">
+        <button type="button" class="btn btn-danger">나누어진 버튼</button>
+        <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <span class="visually-hidden">Toggle Dropdown (Hidden) </span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://www.naver.com">네이버</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li>
+                <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">Separated link</a></li>
+        </ul>
+    </div>
     <script>
-
+        const dropdownElementList = document.querySelectorAll('.dropdown-toggle')
+        const dropdownList = [...dropdownElementList].map(dropdownToggleEl => new bootstrap.Dropdown(dropdownToggleEl))
     </script>
 </body>
 
