@@ -33,6 +33,9 @@
         data-bs-placement="left" data-bs-content="Left popover">
         Popover on left
     </button>
+    <button type="button" class="btn btn-primary" data-bs-container="body" data-bs-toggle="popover"
+        data-bs-placement="top" data-bs-custom-class="Custom-popover" data-bs-title="Custom Popover"
+        data-bs-content="커스텀 스타일을 입힌 팝오버 입니다">Custom-PopOver</button>
     <script>
         const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
         const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
